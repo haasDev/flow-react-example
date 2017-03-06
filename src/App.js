@@ -7,27 +7,31 @@ class App extends Component {
     items: [
       {
         title: 'clean room',
-        done: false
+        done: false,
       },
       {
         title: 'go grocery shopping',
-        done: false
+        done: false,
       },
       {
         title: 'change oil',
-        done: false
+        done: false,
       },
       {
         title: 'create the next million dollar app',
-        done: false
+        done: false,
       },
-    ]
-  }
+    ],
+  };
 
   toggleTodo(item) {
     const {items} = this.state;
-    const newItems = items.map(stateItem => stateItem.title === item.title ?
-      ({...stateItem, done: !stateItem.done}) : stateItem);
+    const newItems = items.map(
+      stateItem =>
+        stateItem.title === item.title
+          ? {...stateItem, done: !stateItem.done}
+          : stateItem,
+    );
     this.setState({items: newItems});
   }
 
@@ -40,16 +44,15 @@ class App extends Component {
           <h2>My Todos</h2>
         </div>
         <ul>
-          {
-            items.map(item =>
-              <li
-                key={item.title}
-                className={item.done ? 'task-done' : ''}
-                onClick={() => this.toggleTodo(item)}>
-                {item.title}
-              </li>
-            )
-          }
+          {items.map(item => (
+            <li
+              key={item.title}
+              className={item.done ? 'task-done' : ''}
+              onClick={() => this.toggleTodo(item)}
+            >
+              {item.title}
+            </li>
+          ))}
         </ul>
       </div>
     );
