@@ -1,6 +1,8 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
+// @flow
+
+import React, {Component} from 'react'
+import logo from './logo.svg'
+import './App.css'
 
 class App extends Component {
   state = {
@@ -22,21 +24,21 @@ class App extends Component {
         done: false,
       },
     ],
-  };
+  }
 
-  toggleTodo(item) {
-    const {items} = this.state;
+  toggleTodo(item: {title: string, done: boolean}) {
+    const {items} = this.state
     const newItems = items.map(
       stateItem =>
-        stateItem.title === item.title
-          ? {...stateItem, done: !stateItem.done}
-          : stateItem,
-    );
-    this.setState({items: newItems});
+        stateItem.title === item.title ?
+          {...stateItem, done: !stateItem.done} :
+          stateItem,
+    )
+    this.setState({items: newItems})
   }
 
   render() {
-    const {items} = this.state;
+    const {items} = this.state
     return (
       <div className="App">
         <div className="App-header">
@@ -55,8 +57,8 @@ class App extends Component {
           ))}
         </ul>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

@@ -2241,6 +2241,10 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://npm.platforms.engineering/f/flatten/_attachments/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
+flow-bin@^0.41.0:
+  version "0.41.0"
+  resolved "https://npm.platforms.engineering/f/flow-bin/_attachments/flow-bin-0.41.0.tgz#8badac9a19da45004997e599bd316518db489b2e"
+
 flow-parser@0.38.0:
   version "0.38.0"
   resolved "https://npm.platforms.engineering/f/flow-parser/_attachments/flow-parser-0.38.0.tgz#a631c46170c5b42400d905a75cfc83ce8db29424"
